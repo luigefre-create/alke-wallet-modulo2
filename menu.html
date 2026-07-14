@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Alke Wallet - Menú</title>
+  <!-- Bootstrap 4 básico -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+  <!-- Navbar azul súper limpia con solo "Inicio" a la derecha -->
+  <nav class="navbar navbar-dark bg-primary navbar-expand">
+    <span class="navbar-brand font-weight-bold">Alke Wallet</span>
+    <div class="navbar-nav ml-auto">
+      <a class="nav-item nav-link active" href="menu.html">Inicio</a>
+    </div>
+  </nav>
+
+  <!-- Tarjeta central -->
+  <div class="container my-5" style="max-width: 400px;">
+    <div class="card p-4 text-center shadow-sm" id="tarjeta-menu">
+      <h1 class="h4 text-muted">Menú Principal</h1>
+      
+      <div class="my-4">
+        <p class="text-secondary mb-1">Dinero en cuenta:</p>
+        <h2 id="saldo" class="text-success font-weight-bold">$0</h2>
+      </div>
+
+      <!-- Botones de navegación principal con "Transferir" -->
+      <a href="deposit.html" class="btn btn-primary btn-block mb-2">Depositar</a>
+      <a href="sendmoney.html" class="btn btn-primary btn-block mb-2">Transferir</a>
+      <a href="transactions.html" class="btn btn-primary btn-block">Movimientos</a>
+    </div>
+  </div>
+
+  <!-- jQuery y el Script -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

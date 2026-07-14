@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Alke Wallet - Depositar</title>
+  <!-- Bootstrap 4 básico -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+  <!-- Navbar idéntica al menú (Solo con enlace de Inicio) -->
+  <nav class="navbar navbar-dark bg-primary navbar-expand">
+    <span class="navbar-brand font-weight-bold">Alke Wallet</span>
+    <div class="navbar-nav ml-auto">
+      <a class="nav-item nav-link" href="menu.html">Inicio</a>
+    </div>
+  </nav>
+
+  <!-- Tarjeta de Depósito -->
+  <div class="container my-5" style="max-width: 400px;">
+    <div class="card p-4 text-center shadow-sm" id="tarjeta-deposito">
+      <h1 class="h4 text-muted mb-3">Depositar Fondos</h1>
+      
+      <!-- Saldo actual disponible -->
+      <div class="my-3 text-left">
+        <p class="text-secondary mb-1">Saldo actual:</p>
+        <h3 id="saldo-actual" class="text-success font-weight-bold">$0</h3>
+      </div>
+
+      <!-- Formulario simple para el monto -->
+      <div class="form-group text-left">
+        <label for="monto-deposito" class="text-secondary">Monto a depositar:</label>
+        <input type="number" class="form-control" id="monto-deposito" placeholder="Ej: 5000">
+      </div>
+
+      <!-- Botones de Acción -->
+      <button id="btn-depositar" class="btn btn-primary btn-block mb-2">Confirmar Depósito</button>
+      <a href="menu.html" class="btn btn-outline-secondary btn-block">Volver al Menú</a>
+    </div>
+  </div>
+
+  <!-- jQuery y el Script -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/deposit.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Alke Wallet - Iniciar Sesión</title>
+  <!-- Bootstrap 4 básico -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+  <!-- Navbar azul limpia (Sin enlaces, porque aún no se inicia sesión) -->
+  <nav class="navbar navbar-dark bg-primary justify-content-center">
+    <span class="navbar-brand font-weight-bold">Alke Wallet</span>
+  </nav>
+
+  <!-- Tarjeta de Login -->
+  <div class="container my-5" style="max-width: 400px;">
+    <div class="card p-4 shadow-sm" id="tarjeta-login">
+      <h1 class="h4 text-muted text-center mb-4">Iniciar Sesión</h1>
+
+      <!-- Input de Correo -->
+      <div class="form-group">
+        <label for="email" class="text-secondary font-weight-bold">Correo Electrónico:</label>
+        <input type="email" class="form-control" id="email" placeholder="correo@correo.com">
+      </div>
+
+      <!-- Input de Contraseña -->
+      <div class="form-group mb-4">
+        <label for="password" class="text-secondary font-weight-bold">Contraseña:</label>
+        <input type="password" class="form-control" id="password" placeholder="••••••••">
+      </div>
+
+      <!-- Botón para Ingresar -->
+      <button id="btn-login" class="btn btn-primary btn-block">Ingresar</button>
+    </div>
+  </div>
+
+  <!-- jQuery y el Script de Login -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

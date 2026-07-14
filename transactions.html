@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Alke Wallet - Historial</title>
+  <!-- Bootstrap 4 básico -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+  <!-- Navbar idéntica al menú -->
+  <nav class="navbar navbar-dark bg-primary navbar-expand">
+    <span class="navbar-brand font-weight-bold">Alke Wallet</span>
+    <div class="navbar-nav ml-auto">
+      <a class="nav-item nav-link" href="menu.html">Inicio</a>
+    </div>
+  </nav>
+
+  <!-- Tarjeta de Historial -->
+  <div class="container my-5" style="max-width: 400px;">
+    <div class="card p-4 shadow-sm" id="tarjeta-movimientos">
+      <h1 class="h4 text-muted text-center mb-3">Últimos Movimientos</h1>
+
+      <!-- Mostrar saldo disponible -->
+      <div class="my-3 text-center">
+        <p class="text-secondary mb-1">Saldo total disponible:</p>
+        <h3 id="saldo-actual" class="text-success font-weight-bold">$0</h3>
+      </div>
+
+      <!-- Requerimiento: Historial de transacciones visualmente claro -->
+      <div class="text-left mt-4">
+        <p class="font-weight-bold text-secondary">Registro de transacciones:</p>
+        <ul class="list-group" id="lista-transacciones">
+          <!-- Este contenedor se llenará dinámicamente usando jQuery -->
+          <li class="list-group-item text-muted text-center" id="sin-movimientos">Aún no registras movimientos.</li>
+        </ul>
+      </div>
+
+      <!-- Botón opcional para borrar historial en las pruebas -->
+      <button id="btn-limpiar" class="btn btn-outline-danger btn-sm btn-block mt-3">Limpiar Historial</button>
+
+      <a href="menu.html" class="btn btn-outline-secondary btn-block mt-3">Volver al Menú</a>
+    </div>
+  </div>
+
+  <!-- jQuery y el Script -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/transactions.js"></script>
+</body>
+</html>

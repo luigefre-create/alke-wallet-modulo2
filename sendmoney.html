@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Alke Wallet - Transferir</title>
+  <!-- Bootstrap 4 básico -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+
+  <!-- Navbar idéntica al menú -->
+  <nav class="navbar navbar-dark bg-primary navbar-expand">
+    <span class="navbar-brand font-weight-bold">Alke Wallet</span>
+    <div class="navbar-nav ml-auto">
+      <a class="nav-item nav-link" href="menu.html">Inicio</a>
+    </div>
+  </nav>
+
+  <!-- Tarjeta de Transferencia -->
+  <div class="container my-5" style="max-width: 400px;">
+    <div class="card p-4 shadow-sm" id="tarjeta-transferir">
+      <h1 class="h4 text-muted text-center mb-3">Transferir Dinero</h1>
+
+      <!-- Saldo actual disponible -->
+      <div class="my-3 text-left">
+        <p class="text-secondary mb-1">Saldo disponible:</p>
+        <h3 id="saldo-actual" class="text-success font-weight-bold">$0</h3>
+      </div>
+
+      <!-- Formulario para Transferir (Requerimiento) -->
+      <div class="form-group text-left">
+        <label for="buscar-contacto" class="text-secondary font-weight-bold">Buscar Contacto:</label>
+        <!-- El atributo "list" conecta el input con el datalist de abajo para el autocompletar -->
+        <input type="text" class="form-control" id="buscar-contacto" placeholder="Escribe un nombre..." list="contactos-sugeridos">
+        
+        <!-- Requerimiento: Autocompletar en búsqueda de contactos -->
+        <datalist id="contactos-sugeridos">
+          <option value="Juan Pérez">
+          <option value="María López">
+          <option value="Carlos Gómez">
+        </datalist>
+      </div>
+
+      <div class="form-group text-left">
+        <label for="monto-transferir" class="text-secondary font-weight-bold">Monto a transferir ($):</label>
+        <input type="number" class="form-control" id="monto-transferir" placeholder="Ej: 5000">
+      </div>
+
+      <button id="btn-transferir" class="btn btn-primary btn-block mb-3">Realizar Transferencia</button>
+
+      <hr>
+
+      <!-- Requerimiento: Sección de Agregar nuevo contacto -->
+      <div class="text-left mt-3">
+        <h6 class="text-muted font-weight-bold">¿Nuevo destinatario? Agrégalo aquí:</h6>
+        <input type="text" class="form-control form-control-sm mb-2" id="nuevo-contacto-nombre" placeholder="Nombre completo">
+        <button id="btn-agregar-contacto" class="btn btn-outline-primary btn-sm btn-block">Agregar Contacto</button>
+      </div>
+
+      <a href="menu.html" class="btn btn-outline-secondary btn-block mt-3">Volver al Menú</a>
+    </div>
+  </div>
+
+  <!-- jQuery y el Script -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/sendmoney.js"></script>
+</body>
+</html>
