@@ -8,7 +8,7 @@
 </head>
 <body class="bg-light">
 
-  <!-- Navbar azul súper limpia con solo "Inicio" a la derecha -->
+  <!-- Navbar azul -->
   <nav class="navbar navbar-dark bg-primary navbar-expand">
     <span class="navbar-brand font-weight-bold">Alke Wallet</span>
     <div class="navbar-nav ml-auto">
@@ -26,10 +26,13 @@
         <h2 id="saldo" class="text-success font-weight-bold">$0</h2>
       </div>
 
-      <!-- Botones de navegación principal con "Transferir" -->
-      <a href="deposit.html" class="btn btn-primary btn-block mb-2">Depositar</a>
-      <a href="sendmoney.html" class="btn btn-primary btn-block mb-2">Transferir</a>
-      <a href="transactions.html" class="btn btn-primary btn-block">Movimientos</a>
+      <!-- Leyenda dinámica de redirección (AGREGADA) -->
+      <p id="leyendaRedireccion" class="text-info font-weight-bold my-2" style="min-height: 24px;"></p>
+
+      <!-- Botones con ID para eventos jQuery (MODIFICADOS) -->
+      <button id="btnDepositar" class="btn btn-primary btn-block mb-2">Depositar</button>
+      <button id="btnEnviar" class="btn btn-primary btn-block mb-2">Transferir</button>
+      <button id="btnMovimientos" class="btn btn-primary btn-block">Movimientos</button>
     </div>
   </div>
 

@@ -8,7 +8,7 @@
 </head>
 <body class="bg-light">
 
-  <!-- Navbar idéntica al menú (Solo con enlace de Inicio) -->
+  <!-- Navbar -->
   <nav class="navbar navbar-dark bg-primary navbar-expand">
     <span class="navbar-brand font-weight-bold">Alke Wallet</span>
     <div class="navbar-nav ml-auto">
@@ -21,21 +21,29 @@
     <div class="card p-4 text-center shadow-sm" id="tarjeta-deposito">
       <h1 class="h4 text-muted mb-3">Depositar Fondos</h1>
       
+      <!-- Contenedor dinámico para Alertas de Bootstrap (AGREGADO) -->
+      <div id="alert-container"></div>
+
       <!-- Saldo actual disponible -->
       <div class="my-3 text-left">
         <p class="text-secondary mb-1">Saldo actual:</p>
         <h3 id="saldo-actual" class="text-success font-weight-bold">$0</h3>
       </div>
 
-      <!-- Formulario simple para el monto -->
-      <div class="form-group text-left">
-        <label for="monto-deposito" class="text-secondary">Monto a depositar:</label>
-        <input type="number" class="form-control" id="monto-deposito" placeholder="Ej: 5000">
-      </div>
+      <!-- Leyenda con el monto depositado (AGREGADO) -->
+      <p id="leyendaMonto" class="text-info font-weight-bold mb-3"></p>
 
-      <!-- Botones de Acción -->
-      <button id="btn-depositar" class="btn btn-primary btn-block mb-2">Confirmar Depósito</button>
-      <a href="menu.html" class="btn btn-outline-secondary btn-block">Volver al Menú</a>
+      <!-- Formulario de depósito (MODIFICADO) -->
+      <form id="depositForm">
+        <div class="form-group text-left">
+          <label for="monto-deposito" class="text-secondary">Monto a depositar:</label>
+          <input type="number" class="form-control" id="monto-deposito" placeholder="Ej: 5000" min="1">
+        </div>
+
+        <!-- Botones de Acción -->
+        <button type="submit" id="btn-depositar" class="btn btn-primary btn-block mb-2">Confirmar Depósito</button>
+        <a href="menu.html" class="btn btn-outline-secondary btn-block">Volver al Menú</a>
+      </form>
     </div>
   </div>
 

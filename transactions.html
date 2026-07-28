@@ -8,7 +8,7 @@
 </head>
 <body class="bg-light">
 
-  <!-- Navbar idéntica al menú -->
+  <!-- Navbar -->
   <nav class="navbar navbar-dark bg-primary navbar-expand">
     <span class="navbar-brand font-weight-bold">Alke Wallet</span>
     <div class="navbar-nav ml-auto">
@@ -21,22 +21,34 @@
     <div class="card p-4 shadow-sm" id="tarjeta-movimientos">
       <h1 class="h4 text-muted text-center mb-3">Últimos Movimientos</h1>
 
+      <!-- Contenedor dinámico para Alertas de Bootstrap (AGREGADO) -->
+      <div id="alert-container"></div>
+
       <!-- Mostrar saldo disponible -->
       <div class="my-3 text-center">
         <p class="text-secondary mb-1">Saldo total disponible:</p>
         <h3 id="saldo-actual" class="text-success font-weight-bold">$0</h3>
       </div>
 
-      <!-- Requerimiento: Historial de transacciones visualmente claro -->
-      <div class="text-left mt-4">
-        <p class="font-weight-bold text-secondary">Registro de transacciones:</p>
+      <!-- Requerimiento: Filtro con selector <select> (AGREGADO) -->
+      <div class="form-group text-left mt-3">
+        <label for="selectFiltro" class="font-weight-bold text-secondary mb-1">Filtrar por tipo:</label>
+        <select id="selectFiltro" class="form-control form-control-sm">
+          <option value="todos">Todos los movimientos</option>
+          <option value="deposito">Depósitos</option>
+          <option value="transferencia">Transferencias enviadas</option>
+        </select>
+      </div>
+
+      <!-- Registro de transacciones -->
+      <div class="text-left mt-3">
+        <p class="font-weight-bold text-secondary mb-2">Registro de transacciones:</p>
         <ul class="list-group" id="lista-transacciones">
-          <!-- Este contenedor se llenará dinámicamente usando jQuery -->
           <li class="list-group-item text-muted text-center" id="sin-movimientos">Aún no registras movimientos.</li>
         </ul>
       </div>
 
-      <!-- Botón opcional para borrar historial en las pruebas -->
+      <!-- Botón para borrar historial -->
       <button id="btn-limpiar" class="btn btn-outline-danger btn-sm btn-block mt-3">Limpiar Historial</button>
 
       <a href="menu.html" class="btn btn-outline-secondary btn-block mt-3">Volver al Menú</a>
